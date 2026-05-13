@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CMPS 3350 Study App</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══ HOME ══ -->
+<div id="home">
+  <div class="home-header">
+    <h1>CMPS 3350 <span>Study Deck</span></h1>
+    <p>Software Engineering · Spring 2026 · All 21 lecture modules</p>
+  </div>
+  <div class="stats-row" id="stats-row"></div>
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search topics…" oninput="filterDecks()">
+  </div>
+  <div class="filter-row">
+    <button class="filter-btn active" onclick="setFilter('all',this)">All</button>
+    <button class="filter-btn" onclick="setFilter('flashcard',this)">Flashcards</button>
+    <button class="filter-btn" onclick="setFilter('truefalse',this)">True / False</button>
+    <button class="filter-btn" onclick="setFilter('fillinblank',this)">Fill in Blank</button>
+  </div>
+  <div class="decks-grid" id="decks-grid"></div>
+</div>
+
+<!-- ══ STUDY SCREEN ══ -->
+<div id="study-screen">
+  <div class="study-header">
+    <button class="back-btn" onclick="goHome()">← Back</button>
+    <div class="study-title" id="study-title"></div>
+    <div class="study-progress" id="study-progress"></div>
+  </div>
+  <div class="mini-prog"><div class="mini-fill" id="study-bar"></div></div>
+  <br>
+  <div class="card-area">
+    <div class="card-wrap">
+      <div class="flashcard" id="flashcard" onclick="flipCard()">
+        <div class="card-face card-front">
+          <div class="card-label">Question</div>
+          <div class="card-text" id="card-front-text"></div>
+          <div class="card-hint">Tap to reveal answer</div>
+        </div>
+        <div class="card-face card-back">
+          <div class="card-label">Answer</div>
+          <div class="card-text" id="card-back-text"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-controls">
+      <button class="ctrl-btn dontknow" onclick="markCard(false)">✗ Still Learning</button>
+      <button class="ctrl-btn flip-btn" onclick="flipCard()">↻ Flip</button>
+      <button class="ctrl-btn know" onclick="markCard(true)">✓ Got It</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ QUIZ SCREEN ══ -->
+<div id="quiz-screen">
+  <div class="mode-header">
+    <button class="back-btn" onclick="goHome()">← Back</button>
+    <div class="study-title" id="quiz-title"></div>
+    <div class="score-counter">Score: <span id="quiz-score-disp">0</span></div>
+    <div class="study-progress" id="quiz-progress"></div>
+  </div>
+  <div class="mini-prog"><div class="mini-fill" id="quiz-bar"></div></div>
+  <br>
+  <div class="quiz-area">
+    <div class="quiz-card anim" id="quiz-card">
+      <div class="quiz-type-badge" id="quiz-type-badge"></div>
+      <div class="quiz-question" id="quiz-question"></div>
+      <div id="quiz-options"></div>
+      <div class="quiz-feedback" id="quiz-feedback"></div>
+      <button class="quiz-submit" id="quiz-submit" onclick="submitAnswer()">Check Answer</button>
+      <button class="quiz-next" id="quiz-next" onclick="nextQuizQ()">Next Question →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ RESULTS SCREEN ══ -->
+<div id="results-screen">
+  <div class="results-card anim">
+    <div style="font-size:48px" id="results-emoji">🎉</div>
+    <div class="results-score" id="results-pct"></div>
+    <div class="results-label" id="results-label"></div>
+    <div class="results-breakdown">
+      <div class="rb-item"><div class="rb-num" style="color:var(--accent)" id="res-correct">0</div><div class="rb-label">Correct</div></div>
+      <div class="rb-item"><div class="rb-num" style="color:var(--accent3)" id="res-wrong">0</div><div class="rb-label">Wrong</div></div>
+      <div class="rb-item"><div class="rb-num" style="color:var(--accent2)" id="res-total">0</div><div class="rb-label">Total</div></div>
+    </div>
+    <div class="results-actions">
+      <button class="res-btn primary" id="retry-btn">Retry Quiz</button>
+      <button class="res-btn secondary" onclick="goHome()">← Back to Decks</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
