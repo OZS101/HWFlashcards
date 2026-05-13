@@ -121,16 +121,16 @@ suite('DECKS data integrity',function(){
 
 // SUITE 4: EXAM_QUESTIONS
 suite('EXAM_QUESTIONS data',function(){
-  test('100 questions',function(){assertEq(EXAM_QUESTIONS.length,100);});
-  test('every q has id,topic,type,question,answer',function(){
+  test('200 questions',function(){assertEq(EXAM_QUESTIONS.length,200);});
+  test('every q has id,topic,question,answer',function(){
     EXAM_QUESTIONS.forEach((q,i)=>{
       assert(typeof q.id==='number','q'+i+'id');assert(q.topic,'q'+i+'topic');
-      assertEq(q.type,'short_answer','q'+i+'type');assert(q.question,'q'+i+'question');assert(q.answer,'q'+i+'answer');
+      assert(q.question,'q'+i+'question');assert(q.answer,'q'+i+'answer');
     });
   });
-  test('ids 1-100 unique',function(){
+  test('ids 1-200 unique',function(){
     const ids=EXAM_QUESTIONS.map(q=>q.id).sort((a,b)=>a-b);
-    assertEq(ids[0],1);assertEq(ids[99],100);assertEq(new Set(ids).size,100);
+    assertEq(ids[0],1);assertEq(ids[199],200);assertEq(new Set(ids).size,200);
   });
 });
 
@@ -213,8 +213,8 @@ suite('Navigation',function(){
   });
 });
 </script>
-<script src="decks.js"></script>
-<script src="exam-questions.js"></script>
-<script src="script.js"></script>
+<script src="js/decks.js"></script>
+<script src="js/exam-questions.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

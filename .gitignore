@@ -1,0 +1,13 @@
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# Temp
+*.log
+node_modules/

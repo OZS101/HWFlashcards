@@ -1,14 +1,28 @@
-# CMPS 3350 Study App
+# CMPS 3350 Study App (Merged)
 
-Interactive study tool for Software Engineering (CMPS 3350, Spring 2026). Features flashcards, true/false quizzes, fill-in-the-blank exercises, and a comprehensive 100-question exam mode across 21 lecture modules.
+Interactive study tool for Software Engineering (CMPS 3350, Spring 2026). Features flashcards, true/false quizzes, fill-in-the-blank exercises, and a comprehensive 200-question exam mode across 21 lecture modules.
+
+## Data Sources
+
+This is a **hybrid merge** of two versions:
+- **Original** — natural study-friendly Q&A flashcards
+- **Slide-verified** — content rebuilt directly from `CMPS3350-Spring-2026-Slides.zip` PDFs with source references
+
+| Component | Source |
+|-----------|--------|
+| Flashcards (360) | Original — natural Q&A format |
+| True/False (252) | Slide-verified — source-backed with real slide check |
+| Fill-in-Blank (254) | Slide-verified — meaningful technical terms (no filler words) |
+| Multiple Choice (84) | Slide-verified — source-backed with slide explanations |
+| Exam Questions (200) | Both — 100 slide-verified exact-term + 100 original study Q&A |
 
 ## Features
 
 - **Flashcards** — Shuffled card deck per topic; mark cards as "Got It" or "Still Learning"; per-card progress persists across sessions
-- **True / False Quiz** — Timed quiz mode with instant feedback and explanations
-- **Fill in the Blank** — Text-input quiz with hints; normalized answer matching tolerates minor formatting differences
-- **Multiple Choice** — 60 multiple-choice mock exam questions across 13 decks with A/B/C/D options and explanations
-- **Exam Mode** — 100 short-answer questions covering all topics, shuffled each attempt, with score tracking
+- **True / False Quiz** — Slide-verified questions with source-backed explanations
+- **Fill in the Blank** — Text-input quiz with slide-hints; no weak filler-word answers
+- **Multiple Choice** — 84 slide-verified questions with source slide references
+- **Exam Mode** — 200 short-answer questions (100 slide-verified + 100 original), shuffled each attempt
 - **Search** — Filters decks by title and card/quiz content
 - **Progress Tracking** — Tracks exactly which flashcards you've mastered (per-card indices), plus quiz scores per deck, saved to `localStorage`
 - **Results Screen** — Percentage score with encouraging feedback and retry option
@@ -31,20 +45,26 @@ Interactive study tool for Software Engineering (CMPS 3350, Spring 2026). Featur
 | Quiz (T/F) | Click True or False; read explanation |
 | Quiz (Fill-in) | Type answer, press Enter or click Check |
 | Quiz (Multiple Choice) | Click A/B/C/D option; explanation shown |
-| Exam | Type short answer, press Enter; 100 shuffled questions |
+| Exam | Type short answer, press Enter; 200 shuffled questions |
 | Results | Retry or go back to decks |
 
 ## File Structure
 
 ```
 index.html              — HTML structure (all screens)
-style.css               — Dark theme, responsive layout, animations
-script.js               — App logic (state, navigation, quiz/flashcard/exam/MC modes)
-decks.js                — 21 lecture modules with cards, T/F, FIB, and MC data
-exam-questions.js       — 100 exam questions across all topics
-CMPS3350_ALL_IN_ONE.json          — Consolidated source data (all decks + MC + exam100)
-CMPS3350_100_exam_questions.json  — Legacy exam questions source
+tests.html              — Browser-based test suite (27 assertions)
 README.md               — This file
+.gitignore              — OS, IDE, and log exclusions
+css/
+  style.css             — Dark theme, responsive layout, animations
+js/
+  script.js             — App logic (state, navigation, quiz/flashcard/exam/MC modes)
+  decks.js              — 21 lecture modules (360 cards, 252 T/F, 254 FIB, 84 MC)
+  exam-questions.js     — 200 exam questions across all topics
+data/
+  CMPS3350_ALL_IN_ONE.json  — Consolidated source data (all decks + 200 exam)
+.github/
+  workflows/static.yml  — GitHub Pages deploy action
 ```
 
 ## Technical Notes
@@ -55,3 +75,5 @@ README.md               — This file
 - Answer matching uses `normalizeAnswer()` (lowercase, trim, trailing punctuation stripped)
 - Cards use Fisher-Yates shuffle for unbiased randomization
 - Flashcard progress tracks individual card indices (`knownIndices[]`) for accurate per-card tracking across sessions
+- T/F, FIB, and MC questions include `source` fields referencing specific PDF slides
+- Exam questions 1-100 are slide-verified; 101-200 are original study Q&A
