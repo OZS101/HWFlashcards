@@ -77,7 +77,8 @@
       <div class="quiz-question" id="quiz-question"></div>
       <div id="quiz-options"></div>
       <div class="quiz-feedback" id="quiz-feedback"></div>
-      <button class="quiz-submit" id="quiz-submit" onclick="submitAnswer()">Check Answer</button>
+       <button class="quiz-submit" id="quiz-submit" onclick="submitAnswer()">Check Answer</button>
+      <button class="quiz-prev" id="quiz-prev" onclick="prevQuizQ()" style="display:none">&lt; Previous</button>
       <button class="quiz-next" id="quiz-next" onclick="nextQuizQ()">Next Question &gt;</button>
     </div>
   </div>
@@ -86,8 +87,8 @@
 <!-- ══ RESULTS SCREEN ══ -->
 <div id="results-screen">
   <div class="results-card anim">
-    <div style="font-size:48px" id="results-emoji">:)</div>
     <div class="results-score" id="results-pct"></div>
+    <div class="results-label" id="results-label"></div>
     <div class="results-label" id="results-label"></div>
     <div class="results-breakdown">
       <div class="rb-item"><div class="rb-num" style="color:var(--accent)" id="res-correct">0</div><div class="rb-label">Correct</div></div>

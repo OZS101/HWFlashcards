@@ -1,0 +1,1017 @@
+{
+  "schemaVersion": "1.0",
+  "course": "CMPS 3350 Software Engineering",
+  "term": "Spring 2026",
+  "description": "Additional flashcards generated from the CMPS 3350 slide decks. Designed to follow the existing app deck/card structure.",
+  "totalExtraCards": 210,
+  "decks": [
+    {
+      "id": "req-eng",
+      "title": "Requirements Engineering",
+      "icon": "📋",
+      "color": "#b8ff57",
+      "cards": [
+        {
+          "q": "What should the requirements gathering process identify before development begins?",
+          "a": "Stakeholders, audience/users, deliverables, timeline/roadmap, and resources such as people and tools."
+        },
+        {
+          "q": "What is Behavior-Driven Development (BDD) story writing used for?",
+          "a": "BDD describes expected behavior through concrete scenarios, often using Given/When/Then language so requirements are testable and understandable."
+        },
+        {
+          "q": "What is the purpose of acceptance criteria in a user story?",
+          "a": "Acceptance criteria define the conditions that must be met before a story is considered complete and acceptable."
+        },
+        {
+          "q": "What are story points used for in Agile requirements planning?",
+          "a": "Story points estimate the relative effort, complexity, and uncertainty of a user story rather than exact hours."
+        },
+        {
+          "q": "What is a Definition of Ready (DoR)?",
+          "a": "A checklist that confirms a user story is clear, understood, sized, and prepared before the team begins implementation."
+        },
+        {
+          "q": "What is a Definition of Done (DoD)?",
+          "a": "A shared checklist that defines when a story is fully complete, including code, tests, review, documentation, and acceptance criteria."
+        },
+        {
+          "q": "What is a technical story?",
+          "a": "A development task focused on technical work such as infrastructure, refactoring, tooling, setup, or architecture rather than a direct user-facing feature."
+        },
+        {
+          "q": "Why are sample tasks added under a user story?",
+          "a": "Tasks break a story into concrete implementation steps so developers can plan and track the work more clearly."
+        },
+        {
+          "q": "What does “ready to implement” mean for a user story?",
+          "a": "The story has enough detail, acceptance criteria, dependencies, and priority clarity for developers to begin work safely."
+        },
+        {
+          "q": "What usually happens across the life cycle of a user story?",
+          "a": "A story moves from idea/backlog to refinement, ready, in progress, review/testing, done, and possibly release."
+        }
+      ]
+    },
+    {
+      "id": "agile",
+      "title": "Agile & Scrum",
+      "icon": "🔄",
+      "color": "#57d9ff",
+      "cards": [
+        {
+          "q": "What is the Agile mindset?",
+          "a": "The Agile mindset values adaptability, collaboration, feedback, continuous improvement, and delivering working software in small increments."
+        },
+        {
+          "q": "How does Scrum differ from traditional Waterfall planning?",
+          "a": "Scrum uses short iterative sprints with frequent feedback, while Waterfall moves through fixed sequential phases with heavy upfront planning."
+        },
+        {
+          "q": "What is Lean’s main goal in Agile thinking?",
+          "a": "Lean focuses on removing waste, improving flow, and delivering customer value efficiently."
+        },
+        {
+          "q": "What is Extreme Programming (XP) known for emphasizing?",
+          "a": "XP emphasizes engineering practices such as TDD, pair programming, continuous integration, refactoring, and frequent releases."
+        },
+        {
+          "q": "What is the Scrum framework built around?",
+          "a": "Scrum is built around roles, events, artifacts, and short sprint cycles that produce increments of working software."
+        },
+        {
+          "q": "What is the purpose of the Daily Standup?",
+          "a": "The Daily Standup helps the team synchronize work, identify blockers, and plan progress for the next day."
+        },
+        {
+          "q": "What is the Scrum Master’s main responsibility?",
+          "a": "The Scrum Master coaches the team, facilitates Scrum events, removes impediments, and helps protect the Agile process."
+        },
+        {
+          "q": "What is the difference between a Sprint Review and a Sprint Retrospective?",
+          "a": "The Sprint Review inspects the product increment; the Retrospective inspects the team’s process and how to improve it."
+        },
+        {
+          "q": "What is a sprint?",
+          "a": "A sprint is a fixed-length iteration where the Scrum team builds, tests, and delivers a usable increment of work."
+        },
+        {
+          "q": "What is an MVP not supposed to be?",
+          "a": "An MVP is not a throwaway prototype, a broken demo, or a complete final product with every planned feature."
+        }
+      ]
+    },
+    {
+      "id": "scm",
+      "title": "SCM, Git & GitHub",
+      "icon": "🌿",
+      "color": "#ff9f57",
+      "cards": [
+        {
+          "q": "What is a feature branch used for in Git workflow?",
+          "a": "A feature branch isolates work on a specific feature or fix so it can be developed and tested without disrupting shared branches."
+        },
+        {
+          "q": "What is the purpose of committing changes to a feature branch?",
+          "a": "Commits save logical checkpoints of work and create a traceable history before merging into shared branches."
+        },
+        {
+          "q": "Why do teams merge feature branches into a local dev branch first?",
+          "a": "It lets developers integrate and test changes locally before pushing them to the remote shared development branch."
+        },
+        {
+          "q": "What is the purpose of pushing a dev branch to the remote repository?",
+          "a": "Pushing shares integrated code with the team and updates the central remote copy used for collaboration and CI/testing."
+        },
+        {
+          "q": "Why should developers pull changes from other team members regularly?",
+          "a": "Regular pulls reduce merge conflicts, keep local work current, and reveal integration problems earlier."
+        },
+        {
+          "q": "What is a forward merge?",
+          "a": "A forward merge brings newer changes from a shared branch into a feature branch so the feature stays current before final merge."
+        },
+        {
+          "q": "What is a pull request (PR)?",
+          "a": "A pull request proposes merging code from one branch into another and allows review, discussion, testing, and approval."
+        },
+        {
+          "q": "Why might a release branch be used during a sprint?",
+          "a": "A release branch stabilizes code for QA and release while new development can continue separately."
+        },
+        {
+          "q": "What should happen if QA finds bugs on a release branch?",
+          "a": "The team fixes the issues, retests, and only releases once testing confirms the fixes are complete."
+        },
+        {
+          "q": "Why clean up branches after a release?",
+          "a": "Cleaning old branches reduces confusion, keeps the repository organized, and prevents stale work from being reused by mistake."
+        }
+      ]
+    },
+    {
+      "id": "greenfield",
+      "title": "Greenfield vs Brownfield",
+      "icon": "🏗️",
+      "color": "#c084fc",
+      "cards": [
+        {
+          "q": "What is the parking lot analogy used to explain Brownfield development?",
+          "a": "Brownfield work is like trying to park or maneuver in a crowded lot: existing constraints limit your choices and make changes harder."
+        },
+        {
+          "q": "What is a monolith?",
+          "a": "A monolith is an application where many features and layers are packaged and deployed together as one unit."
+        },
+        {
+          "q": "When is a monolith often a good choice?",
+          "a": "A monolith is often good for small teams, MVPs, simple domains, and projects that need fast initial delivery."
+        },
+        {
+          "q": "When should a monolith usually be avoided?",
+          "a": "A monolith may be poor when different parts need independent scaling, deployment, ownership, or reliability boundaries."
+        },
+        {
+          "q": "What is technical debt?",
+          "a": "Technical debt is the future cost created by shortcuts, rushed decisions, hacks, poor design, or postponed cleanup."
+        },
+        {
+          "q": "How does technical debt usually happen?",
+          "a": "It often comes from deadline pressure, unclear requirements, weak reviews, temporary fixes, outdated dependencies, or lack of tests."
+        },
+        {
+          "q": "Why is technical debt different in Greenfield and Brownfield work?",
+          "a": "Greenfield debt is often created by early speed-focused decisions; Brownfield debt is inherited from existing systems and past choices."
+        },
+        {
+          "q": "What are common strategies for managing technical debt?",
+          "a": "Track it, prioritize risky areas, refactor incrementally, add tests, improve documentation, and avoid large risky rewrites unless justified."
+        },
+        {
+          "q": "Why do startups often accept more technical debt?",
+          "a": "Startups may prioritize speed, learning, and market validation over long-term maintainability in the early stages."
+        },
+        {
+          "q": "What is the hard truth about technical debt in mature systems?",
+          "a": "Technical debt rarely disappears on its own; it must be managed intentionally or it slows every future change."
+        }
+      ]
+    },
+    {
+      "id": "codequality",
+      "title": "Code Quality",
+      "icon": "✨",
+      "color": "#ffd057",
+      "cards": [
+        {
+          "q": "Why is measuring code quality difficult?",
+          "a": "Code quality includes both objective signals like complexity and subjective factors like readability, maintainability, and design appropriateness."
+        },
+        {
+          "q": "What is a static analysis report used for?",
+          "a": "It summarizes issues found without running the program, such as code smells, security risks, duplication, complexity, and style violations."
+        },
+        {
+          "q": "What does high code complexity usually indicate?",
+          "a": "High complexity often means code has many branches or paths, making it harder to test, understand, and maintain."
+        },
+        {
+          "q": "What is a code smell?",
+          "a": "A code smell is a warning sign that code may be poorly structured even if it currently works correctly."
+        },
+        {
+          "q": "Give examples of common code smells.",
+          "a": "Long methods, duplicate code, large classes, magic numbers, deep nesting, unclear names, dead code, and too many responsibilities."
+        },
+        {
+          "q": "Why are code reviews important for quality?",
+          "a": "Code reviews catch defects, spread knowledge, improve consistency, enforce standards, and reduce maintainability problems."
+        },
+        {
+          "q": "What should a reviewer look for beyond whether code works?",
+          "a": "Reviewers should check readability, edge cases, test coverage, maintainability, security, performance, and consistency with project standards."
+        },
+        {
+          "q": "How can code quality degrade over time?",
+          "a": "It degrades through rushed fixes, weak ownership, skipped tests, duplicated logic, poor naming, and unresolved technical debt."
+        },
+        {
+          "q": "Why is duplicate code harmful?",
+          "a": "Duplicate code makes changes harder because the same logic must be updated in multiple places, increasing the risk of inconsistencies."
+        },
+        {
+          "q": "Why are magic numbers and strings considered poor quality?",
+          "a": "They hide meaning and make code harder to understand, test, and safely modify compared with named constants."
+        }
+      ]
+    },
+    {
+      "id": "patterns",
+      "title": "Software Patterns",
+      "icon": "🧩",
+      "color": "#57ffd8",
+      "cards": [
+        {
+          "q": "What are the Gang of Four (GoF) design patterns?",
+          "a": "They are classic object-oriented design patterns grouped into creational, structural, and behavioral categories."
+        },
+        {
+          "q": "What is an anti-pattern?",
+          "a": "An anti-pattern is a common but harmful solution that appears useful but creates maintainability, scalability, or design problems."
+        },
+        {
+          "q": "What are the three common GoF pattern categories?",
+          "a": "Creational patterns, structural patterns, and behavioral patterns."
+        },
+        {
+          "q": "What do creational patterns help with?",
+          "a": "Creational patterns help manage object creation, such as Factory, Builder, Prototype, and Singleton."
+        },
+        {
+          "q": "What do structural patterns help with?",
+          "a": "Structural patterns help organize relationships between classes or components, such as Adapter, Facade, Composite, and Decorator."
+        },
+        {
+          "q": "What do behavioral patterns help with?",
+          "a": "Behavioral patterns define communication and responsibility between objects, such as Observer, Strategy, Command, and Iterator."
+        },
+        {
+          "q": "Why should patterns align with language and framework choices?",
+          "a": "A pattern that fits one language or framework may be unnecessary, awkward, or harmful in another environment."
+        },
+        {
+          "q": "What is a common pitfall when using design patterns?",
+          "a": "Overusing patterns can overcomplicate simple code and create unnecessary abstraction."
+        },
+        {
+          "q": "When should you use a design pattern?",
+          "a": "Use a pattern when the problem is recurring, the pattern fits naturally, and it improves clarity, flexibility, or maintainability."
+        },
+        {
+          "q": "When should you avoid a design pattern?",
+          "a": "Avoid a pattern when the problem is simple, the pattern adds unnecessary complexity, or the team does not understand the tradeoffs."
+        }
+      ]
+    },
+    {
+      "id": "tdd",
+      "title": "TDD – Test Driven Development",
+      "icon": "🧪",
+      "color": "#ff6b6b",
+      "cards": [
+        {
+          "q": "Why does TDD improve design?",
+          "a": "Because writing tests first pushes developers toward small, focused, decoupled code with clear inputs and outputs."
+        },
+        {
+          "q": "Why should TDD sometimes be avoided for prototypes?",
+          "a": "Prototypes involve exploration and uncertainty, so writing detailed tests too early can slow learning and create throwaway test code."
+        },
+        {
+          "q": "What is unit testing?",
+          "a": "Unit testing verifies a small isolated piece of code, such as a function or class, independently from the rest of the system."
+        },
+        {
+          "q": "What is integration testing?",
+          "a": "Integration testing checks whether multiple components, services, or layers work together correctly."
+        },
+        {
+          "q": "What is regression testing?",
+          "a": "Regression testing ensures that new changes do not break behavior that previously worked."
+        },
+        {
+          "q": "What is stress or load testing?",
+          "a": "Stress/load testing measures how the system behaves under heavy traffic, high data volume, or resource pressure."
+        },
+        {
+          "q": "What does E2E testing verify?",
+          "a": "End-to-end testing verifies a complete user flow through the full system, often from UI to API to database."
+        },
+        {
+          "q": "What is the difference between mocking and stubbing?",
+          "a": "Stubs return canned data, while mocks can verify how dependencies were called or used."
+        },
+        {
+          "q": "What is code coverage?",
+          "a": "Code coverage measures how much of the codebase is executed by tests, usually reported as a percentage."
+        },
+        {
+          "q": "Why is high code coverage not enough by itself?",
+          "a": "High coverage only proves code ran during tests; it does not prove the tests check the right behavior or edge cases."
+        }
+      ]
+    },
+    {
+      "id": "process",
+      "title": "Software Process Models",
+      "icon": "📊",
+      "color": "#ffa057",
+      "cards": [
+        {
+          "q": "What are common software process models?",
+          "a": "Waterfall, Agile, Scrum, Kanban, XP, Spiral/Hybrid, and DevOps-style continuous delivery models."
+        },
+        {
+          "q": "Why is Waterfall useful in regulated projects?",
+          "a": "Regulated projects often need predictable phases, formal sign-offs, documentation, traceability, and compliance evidence."
+        },
+        {
+          "q": "When is Agile usually not a good fit?",
+          "a": "Agile may struggle when the customer is unavailable, requirements are legally fixed, or documentation and approval gates dominate the project."
+        },
+        {
+          "q": "What is dogfooding?",
+          "a": "Dogfooding means using your own product internally so the team experiences issues before or alongside customers."
+        },
+        {
+          "q": "Why was NASA presented as a Waterfall success case?",
+          "a": "NASA-style projects can benefit from careful upfront planning, documentation, testing, and strict phase control because failure risk is extremely high."
+        },
+        {
+          "q": "Why was Spotify presented as an Agile success case?",
+          "a": "Spotify is associated with autonomous teams, iterative delivery, experimentation, and product-focused feedback loops."
+        },
+        {
+          "q": "Why did the FBI Virtual Case File become a Waterfall failure example?",
+          "a": "It suffered from changing requirements, large upfront design assumptions, and difficulty adapting during the build."
+        },
+        {
+          "q": "What decision factors help choose Agile vs Waterfall?",
+          "a": "Requirement stability, risk level, customer availability, regulation, team experience, documentation needs, and tolerance for change."
+        },
+        {
+          "q": "What is the danger of using Agile badly?",
+          "a": "Poor Agile can become chaotic: unclear priorities, weak documentation, no discipline, poor testing, and constant scope churn."
+        },
+        {
+          "q": "What is the main takeaway when choosing a process model?",
+          "a": "Choose the model that fits the project’s uncertainty, risk, team, stakeholders, and delivery constraints rather than using one approach everywhere."
+        }
+      ]
+    },
+    {
+      "id": "sdlc",
+      "title": "SDLC & ALM",
+      "icon": "🔁",
+      "color": "#57aaff",
+      "cards": [
+        {
+          "q": "What is the purpose of SDLC phases?",
+          "a": "SDLC phases organize development work so teams can plan, build, test, deploy, maintain, and track software systematically."
+        },
+        {
+          "q": "What are ALM components beyond development?",
+          "a": "ALM includes planning, requirements, release management, operations, governance, compliance, support, and retirement."
+        },
+        {
+          "q": "What kinds of documents appear in ALM?",
+          "a": "ALM can include business cases, requirements, design documents, test plans, release notes, support plans, compliance records, and retirement plans."
+        },
+        {
+          "q": "What is the role of a Product Owner?",
+          "a": "The Product Owner represents product priorities, manages backlog direction, and helps define value and acceptance for work items."
+        },
+        {
+          "q": "What is the role of a Business Analyst?",
+          "a": "A Business Analyst helps gather requirements, clarify business needs, document workflows, and translate stakeholder goals into actionable work."
+        },
+        {
+          "q": "What is the role of a Technical Analyst?",
+          "a": "A Technical Analyst connects business requirements to technical feasibility, constraints, systems, integrations, and implementation details."
+        },
+        {
+          "q": "What is the role of a System Architect?",
+          "a": "The System Architect defines high-level technical structure, major components, integration strategy, and long-term design direction."
+        },
+        {
+          "q": "What is a RACI matrix?",
+          "a": "A responsibility assignment matrix that identifies who is Responsible, Accountable, Consulted, and Informed for project activities."
+        },
+        {
+          "q": "What is a build vs buy decision?",
+          "a": "A decision about whether to create a custom solution or purchase/adopt an existing product or service."
+        },
+        {
+          "q": "What are common ALM challenges?",
+          "a": "Common challenges include poor traceability, unclear ownership, tool fragmentation, weak governance, changing requirements, and communication gaps."
+        }
+      ]
+    },
+    {
+      "id": "fullstack",
+      "title": "Full Stack Development",
+      "icon": "🥞",
+      "color": "#ff9fcd",
+      "cards": [
+        {
+          "q": "What does the front-end layer handle?",
+          "a": "The front-end handles the user interface, user interactions, rendering, validation, accessibility, and communication with APIs."
+        },
+        {
+          "q": "What does the middle tier handle?",
+          "a": "The middle tier handles API endpoints, business logic, authentication, validation, orchestration, and communication between UI and data layers."
+        },
+        {
+          "q": "What does the back-end/data layer handle?",
+          "a": "The back-end layer handles persistence, databases, data models, queries, transactions, and storage-related concerns."
+        },
+        {
+          "q": "What is a common full-stack web combination?",
+          "a": "A common combination is a JavaScript front end, REST API or Node/Express middle tier, and a SQL or NoSQL database."
+        },
+        {
+          "q": "What is the data flow in a typical full-stack app?",
+          "a": "User action in the UI triggers an API request, the middle tier processes it, the database stores or retrieves data, and the result returns to the UI."
+        },
+        {
+          "q": "What is a Single Page Application (SPA)?",
+          "a": "An SPA loads once in the browser and updates content dynamically using JavaScript rather than reloading full pages."
+        },
+        {
+          "q": "What is a Progressive Web App (PWA)?",
+          "a": "A PWA is a web app enhanced with app-like features such as offline support, installability, caching, and responsive behavior."
+        },
+        {
+          "q": "Why is separation of concerns important in full-stack development?",
+          "a": "It keeps UI, business logic, and persistence responsibilities clear so the system is easier to test, modify, and debug."
+        },
+        {
+          "q": "What is a common front-end best practice?",
+          "a": "Keep components focused, validate user input, handle loading/error states, and avoid mixing UI code with business or data-access logic."
+        },
+        {
+          "q": "What is a common pitfall across full-stack layers?",
+          "a": "A common pitfall is leaking responsibilities across layers, such as putting database logic in the UI or business rules only in the front end."
+        }
+      ]
+    },
+    {
+      "id": "apis",
+      "title": "APIs",
+      "icon": "🔌",
+      "color": "#a0ff8f",
+      "cards": [
+        {
+          "q": "Why do APIs matter in software systems?",
+          "a": "APIs allow systems, services, front ends, mobile apps, and third parties to communicate through clear controlled interfaces."
+        },
+        {
+          "q": "What is JSON?",
+          "a": "JSON is a lightweight text-based data format commonly used for API requests and responses because it is readable and easy to parse."
+        },
+        {
+          "q": "Why is JSON often preferred over XML for modern web APIs?",
+          "a": "JSON is usually less verbose, easier to read, maps naturally to JavaScript objects, and works well with REST APIs."
+        },
+        {
+          "q": "What is GraphQL best used for?",
+          "a": "GraphQL is useful when clients need flexible queries and want to request exactly the fields they need."
+        },
+        {
+          "q": "What is gRPC best used for?",
+          "a": "gRPC is useful for high-performance internal service-to-service communication using Protocol Buffers and HTTP/2."
+        },
+        {
+          "q": "What is API authentication?",
+          "a": "Authentication verifies who the caller is, often using login credentials, API keys, sessions, or bearer tokens."
+        },
+        {
+          "q": "What is API authorization?",
+          "a": "Authorization determines what an authenticated caller is allowed to access or do, often using roles, permissions, or scopes."
+        },
+        {
+          "q": "What is CORS?",
+          "a": "Cross-Origin Resource Sharing, a browser security mechanism that controls which origins can call an API from client-side code."
+        },
+        {
+          "q": "Why is API documentation important?",
+          "a": "Documentation helps developers discover endpoints, request formats, authentication rules, response examples, and expected errors."
+        },
+        {
+          "q": "What is an API gateway?",
+          "a": "An API gateway sits between clients and services to handle routing, authentication, rate limiting, logging, and cross-cutting concerns."
+        }
+      ]
+    },
+    {
+      "id": "ddd-solid",
+      "title": "DDD & SOLID",
+      "icon": "🏛️",
+      "color": "#e0a0ff",
+      "cards": [
+        {
+          "q": "Why do advanced design principles exist?",
+          "a": "They help manage complexity, reduce coupling, improve maintainability, and keep software aligned with business needs."
+        },
+        {
+          "q": "What is a domain in DDD?",
+          "a": "A domain is the problem space or business area the software is built to support, such as ordering, payments, scheduling, or inventory."
+        },
+        {
+          "q": "What is an aggregate in DDD?",
+          "a": "An aggregate is a cluster of related objects treated as one consistency boundary, with an aggregate root controlling access."
+        },
+        {
+          "q": "What is a repository in DDD?",
+          "a": "A repository provides a domain-friendly interface for retrieving and saving aggregates while hiding persistence details."
+        },
+        {
+          "q": "What is a domain service?",
+          "a": "A domain service holds business logic that does not naturally belong inside a single entity or value object."
+        },
+        {
+          "q": "What is a domain event?",
+          "a": "A domain event records that something important happened in the domain, such as OrderPlaced or PaymentCompleted."
+        },
+        {
+          "q": "What is a bounded context?",
+          "a": "A bounded context is a clear boundary where a particular domain model and language apply consistently."
+        },
+        {
+          "q": "What is the Single Responsibility Principle?",
+          "a": "A class or module should have one main reason to change and focus on one responsibility."
+        },
+        {
+          "q": "What is the Liskov Substitution Principle?",
+          "a": "Subtypes should be usable wherever their base types are expected without breaking correct behavior."
+        },
+        {
+          "q": "What is Dependency Inversion?",
+          "a": "High-level modules should depend on abstractions rather than low-level concrete implementations."
+        }
+      ]
+    },
+    {
+      "id": "persistence",
+      "title": "Persistence Layer",
+      "icon": "💾",
+      "color": "#57d9a0",
+      "cards": [
+        {
+          "q": "What does “persistence without databases” mean?",
+          "a": "Data can be saved using files, local storage, serialized objects, or external APIs instead of a traditional database."
+        },
+        {
+          "q": "Why did software move from files to databases?",
+          "a": "Databases provide better querying, consistency, multi-user access, indexing, reliability, security, and management of growing data."
+        },
+        {
+          "q": "What is a query?",
+          "a": "A query is a request for data, often asking storage to find, filter, sort, insert, update, or delete information."
+        },
+        {
+          "q": "What is SQL?",
+          "a": "SQL is a language used to define, query, and manipulate data in relational databases."
+        },
+        {
+          "q": "What is an ORM?",
+          "a": "An Object-Relational Mapper connects object-oriented code to relational databases by mapping objects to tables and rows."
+        },
+        {
+          "q": "Why do data models not always match code models?",
+          "a": "Objects, relationships, inheritance, and behavior in code do not always map cleanly to tables, rows, and foreign keys."
+        },
+        {
+          "q": "What persistence problem happens when many users act at the same time?",
+          "a": "Concurrent access can create conflicts, race conditions, stale reads, lost updates, or inconsistent data without proper control."
+        },
+        {
+          "q": "What does ACID help guarantee?",
+          "a": "ACID helps transactions remain atomic, consistent, isolated, and durable so data stays reliable."
+        },
+        {
+          "q": "Why do backups matter in persistence?",
+          "a": "Backups protect against data loss caused by crashes, corruption, accidental deletion, hardware failure, or bad deployments."
+        },
+        {
+          "q": "Why is persistence security important?",
+          "a": "Stored data may contain sensitive information, so systems need access control, validation, encryption, auditing, and safe query practices."
+        }
+      ]
+    },
+    {
+      "id": "sync-async",
+      "title": "Sync vs Async",
+      "icon": "⚡",
+      "color": "#ffdd57",
+      "cards": [
+        {
+          "q": "What is the difference between a process and a thread?",
+          "a": "A process is a running program with its own memory space; a thread is a smaller execution path inside a process."
+        },
+        {
+          "q": "What is a single-threaded process?",
+          "a": "A process that runs one main thread of execution, handling work sequentially unless it uses async/event mechanisms."
+        },
+        {
+          "q": "What is a multi-threaded process?",
+          "a": "A process that uses multiple threads to perform work concurrently within the same program."
+        },
+        {
+          "q": "What are WebSockets used for?",
+          "a": "WebSockets provide persistent two-way communication between client and server for real-time updates."
+        },
+        {
+          "q": "What is Pub/Sub?",
+          "a": "Publish/Subscribe is a messaging model where publishers send messages to topics and subscribers receive messages from those topics."
+        },
+        {
+          "q": "What is a race condition?",
+          "a": "A race condition happens when program behavior depends on unpredictable timing between concurrent operations."
+        },
+        {
+          "q": "How can race conditions be prevented?",
+          "a": "Use locks, transactions, queues, immutable data, atomic operations, synchronization, or controlled message passing."
+        },
+        {
+          "q": "What is lazy loading?",
+          "a": "Lazy loading delays loading data or resources until they are actually needed."
+        },
+        {
+          "q": "What is prefetching?",
+          "a": "Prefetching loads data before it is needed to reduce waiting time later."
+        },
+        {
+          "q": "What is a safe concurrency design goal?",
+          "a": "Design systems so shared state is controlled, operations are predictable, and failures do not corrupt data."
+        }
+      ]
+    },
+    {
+      "id": "crossplatform",
+      "title": "Cross-Platform Development",
+      "icon": "📱",
+      "color": "#ff9f57",
+      "cards": [
+        {
+          "q": "What is the big question in cross-platform development?",
+          "a": "Whether one codebase can deliver acceptable quality, performance, and user experience across multiple platforms."
+        },
+        {
+          "q": "What is portability?",
+          "a": "Portability is the ability for software to run on different hardware, operating systems, or runtimes with minimal changes."
+        },
+        {
+          "q": "What is native development?",
+          "a": "Native development uses platform-specific languages, frameworks, and tools to build software optimized for one platform."
+        },
+        {
+          "q": "What is cross-platform development?",
+          "a": "Cross-platform development uses shared code or frameworks to target multiple platforms from one main codebase."
+        },
+        {
+          "q": "What are the benefits of cross-platform development?",
+          "a": "Benefits include shared code, faster delivery, lower cost, consistent features, and easier support across platforms."
+        },
+        {
+          "q": "What are the challenges of cross-platform development?",
+          "a": "Challenges include performance limits, platform-specific behavior, plugin gaps, UI differences, debugging complexity, and native API access."
+        },
+        {
+          "q": "What is Electron?",
+          "a": "Electron is a framework that bundles Chromium and Node.js so web technologies can be used to build desktop applications."
+        },
+        {
+          "q": "What is a downside of Electron?",
+          "a": "Electron apps can be large and memory-heavy because they bundle a browser runtime."
+        },
+        {
+          "q": "When should a team choose cross-platform?",
+          "a": "Choose cross-platform when speed, shared logic, consistent UX, and broad reach matter more than maximum native optimization."
+        },
+        {
+          "q": "When should a team choose native development?",
+          "a": "Choose native when performance, platform-specific UX, deep hardware integration, or operating-system features are critical."
+        }
+      ]
+    },
+    {
+      "id": "refactor",
+      "title": "Refactor vs Rewrite",
+      "icon": "🔧",
+      "color": "#57b8ff",
+      "cards": [
+        {
+          "q": "What is the decision framework for refactor vs rewrite?",
+          "a": "Consider risk, cost, deadlines, test coverage, architecture limits, team knowledge, business value, and whether behavior must remain stable."
+        },
+        {
+          "q": "What are microservices?",
+          "a": "Microservices are small independently deployable services organized around business capabilities."
+        },
+        {
+          "q": "What does refactoring toward microservices mean?",
+          "a": "It means gradually extracting pieces of a system into services while keeping the larger system working."
+        },
+        {
+          "q": "What does rewriting as microservices mean?",
+          "a": "It means rebuilding the system around a microservice architecture, usually with higher risk and major design changes."
+        },
+        {
+          "q": "What is the Strangler Fig pattern?",
+          "a": "A migration pattern where new functionality gradually wraps and replaces parts of an old system until the legacy system can be retired."
+        },
+        {
+          "q": "What is a warning sign that refactoring may not be enough?",
+          "a": "The architecture fundamentally cannot support required scale, reliability, security, or business direction."
+        },
+        {
+          "q": "What organizational factors affect refactor vs rewrite decisions?",
+          "a": "Team skill, ownership, deadlines, budget, stakeholder patience, documentation, testing culture, and operational risk."
+        },
+        {
+          "q": "What is a modular monolith?",
+          "a": "A monolith organized into clear internal modules with strong boundaries, making it cleaner without requiring distributed services."
+        },
+        {
+          "q": "Why can microservices make a system worse?",
+          "a": "They add deployment, networking, data consistency, monitoring, and operational complexity if the team is not ready."
+        },
+        {
+          "q": "What practical guideline should teams follow before rewriting?",
+          "a": "Do not rewrite just because code is ugly; justify it with clear business, technical, and risk-based reasons."
+        }
+      ]
+    },
+    {
+      "id": "defensive",
+      "title": "Defensive Programming",
+      "icon": "🛡️",
+      "color": "#ff8f57",
+      "cards": [
+        {
+          "q": "Why is defensive programming important for user input?",
+          "a": "User input can be missing, malformed, malicious, too large, or unexpected, so validating it prevents errors and vulnerabilities."
+        },
+        {
+          "q": "What is an assertion?",
+          "a": "An assertion checks that a condition expected by the programmer is true, often used to catch programmer errors during development."
+        },
+        {
+          "q": "What is a fail-safe default?",
+          "a": "A default behavior that chooses the safest option when something is unknown, invalid, or unavailable."
+        },
+        {
+          "q": "What does handling exceptions gracefully mean?",
+          "a": "It means catching expected failures, giving useful feedback, logging details, and avoiding crashes or silent corruption."
+        },
+        {
+          "q": "Why is silently catching exceptions dangerous?",
+          "a": "It hides real failures, makes debugging harder, and can leave the system in an invalid or insecure state."
+        },
+        {
+          "q": "Why should defensive code avoid assumptions about environment?",
+          "a": "Files, networks, permissions, APIs, configurations, and dependencies can fail or differ across machines and deployments."
+        },
+        {
+          "q": "How do guard clauses improve readability?",
+          "a": "They handle invalid cases early and keep the main logic less nested and easier to follow."
+        },
+        {
+          "q": "What is an edge case?",
+          "a": "An unusual or boundary input such as null, empty values, zero, maximum limits, invalid formats, or missing data."
+        },
+        {
+          "q": "What is a common defensive programming anti-pattern?",
+          "a": "Ignoring errors, catching everything silently, trusting all input, overusing global state, or returning unclear failure values."
+        },
+        {
+          "q": "How does defensive programming connect to real-world production systems?",
+          "a": "Production systems face unreliable users, networks, files, APIs, and dependencies, so defensive code helps keep failures controlled."
+        }
+      ]
+    },
+    {
+      "id": "featureflags",
+      "title": "Feature Flags",
+      "icon": "🚩",
+      "color": "#ff6bcd",
+      "cards": [
+        {
+          "q": "Where can feature flags live?",
+          "a": "Feature flags can live in UI code, middle layers, backend services, configuration systems, databases, or feature management platforms."
+        },
+        {
+          "q": "Why is hiding a feature in the UI not real security?",
+          "a": "Users can bypass UI controls, so backend authorization must still enforce access rules."
+        },
+        {
+          "q": "What are operations flags used for?",
+          "a": "Operations flags control runtime behavior such as enabling/disabling expensive processes, scaling behavior, or emergency operational changes."
+        },
+        {
+          "q": "What are permission or entitlement flags used for?",
+          "a": "They control access based on roles, users, organizations, subscriptions, plans, quotas, or privileges."
+        },
+        {
+          "q": "How do feature flags support SaaS tiers?",
+          "a": "They enable or disable features based on pricing tier, subscription level, usage limits, or customer entitlements."
+        },
+        {
+          "q": "What is user segmentation in feature flags?",
+          "a": "User segmentation turns features on for selected groups such as beta users, regions, roles, accounts, percentages, or internal staff."
+        },
+        {
+          "q": "How are feature flags used in games?",
+          "a": "They can control seasonal events, difficulty tuning, rewards, cosmetics, experiments, live balancing, or emergency disabling of broken features."
+        },
+        {
+          "q": "What are feature flag best practices?",
+          "a": "Name flags clearly, document purpose, assign owners, test both states, monitor behavior, and remove old flags after use."
+        },
+        {
+          "q": "What are common feature flag risks?",
+          "a": "Risks include stale flags, complex conditional logic, inconsistent environments, hidden dependencies, and security mistakes."
+        },
+        {
+          "q": "When should you not use a feature flag?",
+          "a": "Avoid flags when a simple configuration, small code change, or normal release process is cleaner and the flag would add unnecessary complexity."
+        }
+      ]
+    },
+    {
+      "id": "mvp",
+      "title": "MVP Evaluation & Code Freeze",
+      "icon": "🏁",
+      "color": "#aaff57",
+      "cards": [
+        {
+          "q": "What is the late-stage trap?",
+          "a": "The late-stage trap is when teams add last-minute features, neglect testing, ignore documentation, and risk destabilizing the product before delivery."
+        },
+        {
+          "q": "How should a team re-evaluate an MVP near the deadline?",
+          "a": "The team should confirm which features are essential, usable, testable, stable, and directly tied to the core user experience."
+        },
+        {
+          "q": "What should be moved to future enhancements?",
+          "a": "Features that are nice-to-have, risky, untested, nonessential, or likely to break stable functionality should be postponed."
+        },
+        {
+          "q": "What should happen during the final sprint?",
+          "a": "The team should stabilize features, fix known issues, run regression tests, prepare the demo, polish UI, and ensure everyone understands the system."
+        },
+        {
+          "q": "Why does code freeze matter?",
+          "a": "Code freeze protects stability by stopping new features and focusing the team on fixes, tests, documentation, and release readiness."
+        },
+        {
+          "q": "What belongs on a final polish checklist?",
+          "a": "UI cleanup, error handling, documentation, demo flow, test coverage, known bug review, consistent data, and deployment readiness."
+        },
+        {
+          "q": "What is the “WOW factor” in a final project?",
+          "a": "A polished or impressive detail that improves the demo without risking the core functionality."
+        },
+        {
+          "q": "Why should the WOW factor be handled carefully?",
+          "a": "It should enhance the product only after the MVP is stable, not distract the team or break essential features."
+        },
+        {
+          "q": "What is the best mindset near code freeze?",
+          "a": "Prioritize working, tested, demonstrable software over adding more features."
+        },
+        {
+          "q": "Why is a smaller working product better than a larger unfinished one?",
+          "a": "A stable product demonstrates value and reliability, while an unfinished product creates risk and may fail during evaluation."
+        }
+      ]
+    },
+    {
+      "id": "troubleshooting",
+      "title": "Troubleshooting Methods",
+      "icon": "🔍",
+      "color": "#ffa0ff",
+      "cards": [
+        {
+          "q": "What is the first step in systematic debugging?",
+          "a": "Reproduce the issue reliably so the team can observe, test, and verify whether a fix works."
+        },
+        {
+          "q": "What should happen after reproducing a bug?",
+          "a": "The team should isolate the problem, gather evidence, form hypotheses, test one change at a time, and document the result."
+        },
+        {
+          "q": "What are tools of the trade for troubleshooting?",
+          "a": "Logs, debuggers, profilers, traces, monitoring dashboards, network tools, test suites, Postman, Swagger, and version history."
+        },
+        {
+          "q": "What is a debugging anti-pattern?",
+          "a": "Changing several things at once, guessing without data, ignoring logs, blaming people, or declaring a fix without reproducing the issue."
+        },
+        {
+          "q": "What is the 5 Whys method?",
+          "a": "A root cause analysis technique where the team repeatedly asks “why?” until it reaches the underlying cause."
+        },
+        {
+          "q": "What is a Fishbone/Ishikawa diagram used for?",
+          "a": "It visually organizes possible causes of a problem into categories so teams can reason about root causes systematically."
+        },
+        {
+          "q": "Why should RCA focus on facts, not blame?",
+          "a": "Blame discourages honesty; facts help the team fix systems, processes, and technical causes that allowed the issue."
+        },
+        {
+          "q": "Why is communication important under pressure?",
+          "a": "Clear communication reduces confusion, coordinates work, prevents duplicate effort, and keeps stakeholders informed during incidents."
+        },
+        {
+          "q": "How does documentation prevent future problems?",
+          "a": "Documentation preserves decisions, fixes, runbooks, known issues, and lessons learned so teams do not repeat the same mistakes."
+        },
+        {
+          "q": "What does “symptoms are clues, not conclusions” mean?",
+          "a": "Visible failures point toward a problem, but the real cause may be deeper in code, configuration, process, or infrastructure."
+        }
+      ]
+    },
+    {
+      "id": "versioning",
+      "title": "Versioning",
+      "icon": "🏷️",
+      "color": "#57d9ff",
+      "cards": [
+        {
+          "q": "Why does every release need to be traceable?",
+          "a": "Traceability lets teams connect releases to commits, issues, bugs, fixes, documentation, and customer reports."
+        },
+        {
+          "q": "What is sequential versioning?",
+          "a": "A simple versioning approach that uses increasing numbers such as 1, 2, 3 for releases."
+        },
+        {
+          "q": "What is build-based versioning?",
+          "a": "A versioning approach that includes build numbers, such as 1.0.1342, to identify specific generated builds."
+        },
+        {
+          "q": "Why do APIs need versioning?",
+          "a": "API versioning keeps existing clients stable while allowing the server to introduce breaking changes or new behavior."
+        },
+        {
+          "q": "What is URL-path API versioning?",
+          "a": "Putting the version in the path, such as /api/v1/users or /api/v2/users."
+        },
+        {
+          "q": "What is header-based API versioning?",
+          "a": "Clients send the desired API version in a request header instead of putting it in the URL path."
+        },
+        {
+          "q": "What is a GitHub release?",
+          "a": "A GitHub release packages a versioned snapshot of code with tags, release notes, assets, and change information."
+        },
+        {
+          "q": "What is a version tag in Git?",
+          "a": "A tag marks a specific commit as an important version or release point, such as v1.2.0."
+        },
+        {
+          "q": "How can GitHub labels support version readiness?",
+          "a": "Labels can track issues or pull requests by status, release target, severity, priority, or readiness for a version."
+        },
+        {
+          "q": "What is the final takeaway of versioning?",
+          "a": "Versioning is not just numbering; it is communication, traceability, stability, and coordination across code, releases, users, and teams."
+        }
+      ]
+    }
+  ]
+}
