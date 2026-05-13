@@ -322,7 +322,7 @@ function answerTF(userAnswer){
   if(state.answered)return;
   const item=state.quizItems[state.quizIndex];
   const correct=userAnswer===item.answer;
-  if(correct&&state.quizResults[state.quizIndex]===null) state.quizScore++;
+  if(correct&&state.quizResults[state.quizIndex]==null) state.quizScore++;
   const trueBtn=document.getElementById('tf-true');
   const falseBtn=document.getElementById('tf-false');
   if(item.answer===true) trueBtn.classList.add('correct');
@@ -338,7 +338,7 @@ function answerMC(letter){
   if(state.answered)return;
   const item=state.quizItems[state.quizIndex];
   const correct=letter===item.answer;
-  if(correct&&state.quizResults[state.quizIndex]===null) state.quizScore++;
+  if(correct&&state.quizResults[state.quizIndex]==null) state.quizScore++;
   ['A','B','C','D'].forEach(l=>{
     const btn=document.getElementById('mc-'+l);
     btn.classList.remove('selected');
@@ -360,7 +360,7 @@ function submitAnswer(){
   const fullAns=normalizeAnswer(item.a);
   const correctAnswers=item.a.split('/').map(s=>normalizeAnswer(s));
   const correct=userVal===fullAns||correctAnswers.some(ans=>userVal===ans);
-  if(correct&&state.quizResults[state.quizIndex]===null) state.quizScore++;
+  if(correct&&state.quizResults[state.quizIndex]==null) state.quizScore++;
   if(correct){inp.classList.add('correct');document.getElementById('quiz-submit').style.display='none';}
   else inp.classList.add('wrong');
   handleAnswer(correct,`Correct answer: ${item.a}`);
@@ -513,7 +513,7 @@ function submitExamAnswer(){
   const item=state.quizItems[state.quizIndex];
   const correctAns=normalizeAnswer(item.answer);
   const correct=userVal===correctAns||(userVal.length>=3&&correctAns.includes(userVal));
-  if(correct&&state.quizResults[state.quizIndex]===null) state.quizScore++;
+  if(correct&&state.quizResults[state.quizIndex]==null) state.quizScore++;
   if(correct){inp.classList.add('correct');document.getElementById('quiz-submit').style.display='none';}
   else inp.classList.add('wrong');
   handleExamAnswer(correct,`Correct answer: ${item.answer}`);
@@ -542,7 +542,7 @@ function answerExamTF(userAnswer){
   if(state.answered)return;
   const item=state.quizItems[state.quizIndex];
   const correct=userAnswer===item.answer;
-  if(correct&&state.quizResults[state.quizIndex]===null) state.quizScore++;
+  if(correct&&state.quizResults[state.quizIndex]==null) state.quizScore++;
   const trueBtn=document.getElementById('exam-tf-true');
   const falseBtn=document.getElementById('exam-tf-false');
   if(item.answer===true) trueBtn.classList.add('correct');
@@ -558,7 +558,7 @@ function answerExamMC(letter){
   if(state.answered)return;
   const item=state.quizItems[state.quizIndex];
   const correct=letter===item.answer;
-  if(correct&&state.quizResults[state.quizIndex]===null) state.quizScore++;
+  if(correct&&state.quizResults[state.quizIndex]==null) state.quizScore++;
   ['A','B','C','D'].forEach(l=>{
     const btn=document.getElementById('exam-mc-'+l);
     if(l===item.answer) btn.classList.add('correct');
