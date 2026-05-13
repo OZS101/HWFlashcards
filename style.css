@@ -45,6 +45,8 @@ body{min-height:100vh}
 .deck-btn.secondary:hover{border-color:var(--accent2);color:var(--accent2)}
 .deck-btn.tertiary{background:var(--surface2);color:var(--text2);border:1px solid var(--border)}
 .deck-btn.tertiary:hover{border-color:var(--accent3);color:var(--accent3)}
+.deck-btn.quaternary{background:var(--surface2);color:var(--text2);border:1px solid var(--border)}
+.deck-btn.quaternary:hover{border-color:#c084fc;color:#c084fc}
 .prog-bar{height:4px;background:var(--surface2);border-radius:100px;margin-top:12px;overflow:hidden}
 .prog-fill{height:100%;background:var(--accent);border-radius:100px;transition:width .4s ease}
 
@@ -82,12 +84,21 @@ body{min-height:100vh}
 .quiz-type-badge{display:inline-block;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600;padding:4px 12px;border-radius:100px;margin-bottom:20px;font-family:var(--font-display)}
 .badge-tf{background:rgba(87,217,255,.1);color:var(--accent2);border:1px solid rgba(87,217,255,.2)}
 .badge-fib{background:rgba(255,107,107,.1);color:var(--accent3);border:1px solid rgba(255,107,107,.2)}
+.badge-mc{background:rgba(192,132,252,.1);color:#c084fc;border:1px solid rgba(192,132,252,.2)}
 .quiz-question{font-size:clamp(16px,2.5vw,20px);font-family:var(--font-display);font-weight:600;line-height:1.4;margin-bottom:28px}
 .tf-options{display:flex;gap:12px}
 .tf-btn{flex:1;padding:16px;border-radius:var(--radius-sm);font-size:16px;font-family:var(--font-display);font-weight:700;cursor:pointer;border:1px solid var(--border);background:var(--surface2);color:var(--text2);transition:all .15s;letter-spacing:.5px}
 .tf-btn:hover{border-color:var(--accent2);color:var(--accent2)}
 .tf-btn.correct{background:rgba(184,255,87,.1);border-color:var(--accent);color:var(--accent)}
 .tf-btn.wrong{background:rgba(255,107,107,.1);border-color:var(--accent3);color:var(--accent3)}
+.mc-options{display:flex;flex-direction:column;gap:10px}
+.mc-btn{display:flex;align-items:center;gap:14px;width:100%;padding:14px 18px;border-radius:var(--radius-sm);font-size:14px;font-family:var(--font-body);font-weight:500;cursor:pointer;border:1px solid var(--border);background:var(--surface2);color:var(--text2);transition:all .15s;text-align:left;line-height:1.4}
+.mc-btn:hover{border-color:var(--accent2);color:var(--text)}
+.mc-letter{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:var(--surface);border:1px solid var(--border);font-family:var(--font-display);font-weight:700;font-size:13px;flex-shrink:0}
+.mc-btn.correct{border-color:var(--accent);color:var(--accent);background:rgba(184,255,87,.08)}
+.mc-btn.correct .mc-letter{background:var(--accent);color:#000;border-color:var(--accent)}
+.mc-btn.wrong{border-color:var(--accent3);color:var(--accent3);background:rgba(255,107,107,.08)}
+.mc-btn.wrong .mc-letter{background:var(--accent3);color:#fff;border-color:var(--accent3)}
 .fib-wrap{display:flex;flex-direction:column;gap:12px}
 .fib-text{font-size:18px;font-family:var(--font-display);font-weight:600;line-height:1.6;padding:20px;background:var(--surface2);border-radius:var(--radius-sm);border:1px solid var(--border)}
 .fib-blank{display:inline-block;min-width:140px;border-bottom:2px solid var(--accent2);margin:0 6px;padding:2px 8px;font-family:var(--font-mono);font-size:16px;color:var(--accent2);vertical-align:middle}

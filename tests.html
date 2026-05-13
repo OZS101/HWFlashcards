@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CMPS 3350 Study App — Tests</title>
+<style>
+  body{font-family:monospace;background:#111;color:#ddd;padding:20px;max-width:800px;margin:0 auto}
+  h1{color:#57d9ff}
+  .pass{color:#4caf50}
+  .fail{color:#f44336;font-weight:bold}
+  .suite{margin:16px 0;padding:12px;background:#1a1a1a;border-radius:6px}
+  .suite h3{margin:0 0 8px 0;color:#ffd057}
+  .test{margin:3px 0;font-size:13px}
+  .summary{margin-top:20px;padding:16px;background:#1a1a1a;border-radius:6px;font-size:16px}
+  #progress{height:4px;background:#333;border-radius:2px;margin-bottom:20px}
+  #progress-fill{height:100%;background:#57d9ff;width:0%;border-radius:2px;transition:width .3s}
+</style>
+</head>
+<body>
+<h1>CMPS 3350 Study App - Test Suite</h1>
+<div id="progress"><div id="progress-fill"></div></div>
+<div id="output"></div>
+
+<script>
+const output=document.getElementById('output');
+const progressFill=document.getElementById('progress-fill');
+let passed=0, failed=0, totalTests=0;
+const suites=[];
+
+function suite(name,fn){suites.push({name,fn});}
+
+function test(name,fn){
+  totalTests++;
+  const div=document.createElement('div');
+  div.className='test';
+  try{fn();passed++;div.innerHTML='<span class="pass">PASS</span> '+name;}
+  catch(e){failed++;div.innerHTML='<span class="fail">FAIL</span> '+name+' - '+e.message;}
+  document.getElementById('suite-'+suites.length).appendChild(div);
+  progressFill.style.width=Math.round((passed+failed)/totalTests*100)+'%';
+}
+
+function assert(cond,msg){if(!cond)throw new Error(msg||'assertion failed');}
+function assertEq(a,b,msg){if(a!==b)throw new Error((msg||'')+': expected '+JSON.stringify(b)+', got '+JSON.stringify(a));}
+
+window.onload=function(){
+  suites.forEach((s,i)=>{
+    const div=document.createElement('div');
+    div.className='suite';div.id='suite-'+(i+1);
+    div.innerHTML='<h3>'+(i+1)+'. '+s.name+'</h3>';
+    output.appendChild(div);s.fn();
+  });
+  const sum=document.createElement('div');sum.className='summary';
+  const color=failed===0?'#4caf50':'#f44336';
+  sum.innerHTML='<span style="color:'+color+'">'+(failed===0?'ALL TESTS PASSED':'SOME TESTS FAILED')+'</span> - '+
+    '<span class="pass">'+passed+' passed</span> | '+
+    '<span class="fail">'+failed+' failed</span> | '+
+    totalTests+' total';
+  output.appendChild(sum);progressFill.style.width='100%';
+};
+
+// SUITE 1: shuffle
+suite('shuffle()',function(){
+  test('returns array of same length',function(){assertEq(shuffle([1,2,3,4,5]).length,5);});
+  test('contains all original elements',function(){
+    const r=shuffle([1,2,3,4,5]);assertEq(r.sort((a,b)=>a-b).join(','),'1,2,3,4,5');
+  });
+  test('does not mutate original',function(){const a=[1,2,3];shuffle(a);assertEq(a.join(','),'1,2,3');});
+  test('returns new array',function(){const a=[1,2,3];assert(shuffle(a)!==a);});
+  test('handles empty array',function(){assertEq(shuffle([]).length,0);});
+  test('handles single element',function(){assertEq(shuffle([42])[0],42);});
+});
+
+// SUITE 2: normalizeAnswer
+suite('normalizeAnswer()',function(){
+  test('lowercases',function(){assertEq(normalizeAnswer('Hello'),'hello');});
+  test('trims whitespace',function(){assertEq(normalizeAnswer('  hi  '),'hi');});
+  test('strips trailing period',function(){assertEq(normalizeAnswer('switch.'),'switch');});
+  test('strips trailing comma',function(){assertEq(normalizeAnswer('test,'),'test');});
+  test('strips trailing !',function(){assertEq(normalizeAnswer('yes!'),'yes');});
+  test('strips trailing ?',function(){assertEq(normalizeAnswer('what?'),'what');});
+  test('strips trailing colon',function(){assertEq(normalizeAnswer('note:'),'note');});
+  test('strips trailing semicolon',function(){assertEq(normalizeAnswer('x;'),'x');});
+  test('strips trailing single quote',function(){assertEq(normalizeAnswer("hello'"),'hello');});
+  test('strips trailing double quote',function(){assertEq(normalizeAnswer('hello"'),'hello');});
+  test('strips trailing parens',function(){assertEq(normalizeAnswer('test)'),'test');assertEq(normalizeAnswer('(test'),'test');});
+  test('collapses spaces',function(){assertEq(normalizeAnswer('a   b'),'a b');});
+  test('empty string',function(){assertEq(normalizeAnswer(''),'');});
+  test('only spaces',function(){assertEq(normalizeAnswer('   '),'');});
+  test('combined',function(){assertEq(normalizeAnswer('  HELLO!  '),'hello');});
+});
+
+// SUITE 3: DECKS
+suite('DECKS data integrity',function(){
+  test('has 21 decks',function(){assertEq(DECKS.length,21);});
+  test('every deck has required props',function(){
+    DECKS.forEach((d,i)=>{
+      assert(d.id&&d.title&&d.icon&&d.color,'deck '+i+' missing prop');
+      assert(Array.isArray(d.cards),'deck '+i+' cards');
+      assert(Array.isArray(d.truefalse),'deck '+i+' tf');
+      assert(Array.isArray(d.fillinblank),'deck '+i+' fib');
+    });
+  });
+  test('unique ids',function(){const ids=DECKS.map(d=>d.id);assertEq(new Set(ids).size,ids.length);});
+  test('every card has q and a',function(){
+    DECKS.forEach((d,i)=>d.cards.forEach((c,j)=>{assert(c.q,'d'+i+'c'+j+' q');assert(c.a,'d'+i+'c'+j+' a');}));
+  });
+  test('every T/F has q,answer,exp',function(){
+    DECKS.forEach((d,i)=>d.truefalse.forEach((t,j)=>{
+      assert(t.q,'d'+i+'tf'+j+'q');assert(typeof t.answer==='boolean','d'+i+'tf'+j+'bool');assert(t.exp,'d'+i+'tf'+j+'exp');
+    }));
+  });
+  test('every FIB has q,a,hint',function(){
+    DECKS.forEach((d,i)=>d.fillinblank.forEach((f,j)=>{assert(f.q&&f.a&&f.hint,'d'+i+'fib'+j+' missing');}));
+  });
+  test('min 5 each',function(){
+    DECKS.forEach((d,i)=>{
+      assert(d.cards.length>=5,'d'+i+'cards');assert(d.truefalse.length>=5,'d'+i+'tf');assert(d.fillinblank.length>=5,'d'+i+'fib');
+    });
+  });
+});
+
+// SUITE 4: EXAM_QUESTIONS
+suite('EXAM_QUESTIONS data',function(){
+  test('100 questions',function(){assertEq(EXAM_QUESTIONS.length,100);});
+  test('every q has id,topic,type,question,answer',function(){
+    EXAM_QUESTIONS.forEach((q,i)=>{
+      assert(typeof q.id==='number','q'+i+'id');assert(q.topic,'q'+i+'topic');
+      assertEq(q.type,'short_answer','q'+i+'type');assert(q.question,'q'+i+'question');assert(q.answer,'q'+i+'answer');
+    });
+  });
+  test('ids 1-100 unique',function(){
+    const ids=EXAM_QUESTIONS.map(q=>q.id).sort((a,b)=>a-b);
+    assertEq(ids[0],1);assertEq(ids[99],100);assertEq(new Set(ids).size,100);
+  });
+});
+
+// SUITE 5: progress storage
+suite('Progress storage',function(){
+  test('getDeckProgress defaults',function(){
+    const p=getDeckProgress('nope');assertEq(p.knownIndices.length,0);assertEq(p.total,0);
+    assertEq(p.tfScore,0);assertEq(p.tfTotal,0);assertEq(p.fibScore,0);assertEq(p.fibTotal,0);
+  });
+  test('save/merge',function(){
+    saveDeckProgress('td',{tfScore:5,tfTotal:10});const p=getDeckProgress('td');
+    assertEq(p.tfScore,5);assertEq(p.tfTotal,10);assertEq(p.fibScore,0);
+    delete progress.td;saveProgress();
+  });
+  test('knownIndices roundtrip',function(){
+    saveDeckProgress('td2',{knownIndices:[0,2,4]});const p=getDeckProgress('td2');
+    assertEq(p.knownIndices.length,3);assertEq(p.knownIndices[0],0);assertEq(p.knownIndices[2],4);
+    delete progress.td2;saveProgress();
+  });
+});
+
+// SUITE 6: migration
+suite('loadProgress() migration',function(){
+  test('removes old known field',function(){
+    localStorage.setItem('cmps3350_progress',JSON.stringify({d:{known:5,total:10}}));
+    loadProgress();assertEq(progress.d.known,undefined);
+    localStorage.removeItem('cmps3350_progress');
+  });
+  test('corrupt JSON',function(){
+    localStorage.setItem('cmps3350_progress','bad{');loadProgress();assertEq(Object.keys(progress).length,0);
+    localStorage.removeItem('cmps3350_progress');
+  });
+  test('empty storage',function(){
+    localStorage.removeItem('cmps3350_progress');loadProgress();assertEq(Object.keys(progress).length,0);
+  });
+});
+
+// SUITE 7: FIB matching
+suite('FIB answer matching',function(){
+  test('split alternatives normalized',function(){
+    const a='Deployment / Release'.split('/').map(s=>normalizeAnswer(s));
+    assertEq(a[0],'deployment');assertEq(a[1],'release');
+  });
+  test('trailing punctuation',function(){assertEq(normalizeAnswer('switch.'),'switch');});
+  test('case insensitive',function(){assertEq(normalizeAnswer('DEPLOYMENT'),'deployment');});
+});
+
+// SUITE 8: per-card tracking
+suite('Per-card flashcard tracking',function(){
+  test('knownIndices stores orig indices',function(){
+    state.studyCards=[{_origIdx:0},{_origIdx:1},{_origIdx:2}];
+    state.knownIndices=new Set();state.knownIndices.add(state.studyCards[0]._origIdx);
+    assertEq(state.knownIndices.has(0),true);assertEq(state.knownIndices.size,1);
+  });
+  test('knownIndices persists multiple',function(){
+    state.knownIndices=new Set([0,2]);assertEq(state.knownIndices.size,2);
+    assert(state.knownIndices.has(0));assert(state.knownIndices.has(2));assert(!state.knownIndices.has(1));
+  });
+  test('initialized as Set',function(){assert(state.knownIndices instanceof Set);});
+});
+
+// SUITE 9: FIB checking uses normalizeAnswer
+suite('normalizeAnswer in FIB',function(){
+  test('strips punctuation from answer alts',function(){
+    const r='test / example.'.split('/').map(s=>normalizeAnswer(s));
+    assertEq(r[0],'test');assertEq(r[1],'example');
+  });
+  test('handles mixed case',function(){
+    const r='Hello World'.split('/').map(s=>normalizeAnswer(s));
+    assertEq(r[0],'hello world');
+  });
+});
+
+// SUITE 10: navigation
+suite('Navigation',function(){
+  test('showScreen shows one screen',function(){
+    showScreen('home');
+    assertEq(document.getElementById('home').style.display,'block');
+    assertEq(document.getElementById('study-screen').style.display,'none');
+  });
+});
+</script>
+<script src="all-in-one.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
