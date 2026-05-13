@@ -40,7 +40,8 @@ Interactive study tool for Software Engineering (CMPS 3350, Spring 2026). Featur
 index.html              — HTML structure (all screens)
 style.css               — Dark theme, responsive layout, animations
 script.js               — App logic (state, navigation, quiz/flashcard/exam/MC modes)
-all-in-one.js           — 21 lecture modules with cards, T/F, FIB, MC data + 100 exam questions
+decks.js                — 21 lecture modules with cards, T/F, FIB, and MC data
+exam-questions.js       — 100 exam questions across all topics
 CMPS3350_ALL_IN_ONE.json          — Consolidated source data (all decks + MC + exam100)
 CMPS3350_100_exam_questions.json  — Legacy exam questions source
 README.md               — This file

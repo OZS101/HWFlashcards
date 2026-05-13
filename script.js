@@ -1,4 +1,4 @@
-// DECKS and EXAM_QUESTIONS are loaded from all-in-one.js
+// DECKS and EXAM_QUESTIONS are loaded from decks.js and exam-questions.js
 
 /* ══════════════════════════════════════════════════════════════
    APP STATE & STORAGE

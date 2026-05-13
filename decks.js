@@ -1,8 +1,6 @@
 /* ══════════════════════════════════════════════════════════════
-   ALL-IN-ONE DATA — 21 CMPS 3350 Lecture Modules + 100 Exam Qs
-   Generated from CMPS3350_ALL_IN_ONE.json
+   DECK DATA — All 21 CMPS 3350 Lecture Modules
 ══════════════════════════════════════════════════════════════ */
-
 const DECKS = [
 {
   id:'req-eng', title:'Requirements Engineering', icon:'[REQ]', color:'#b8ff57',
@@ -40,10 +38,7 @@ const DECKS = [
   cards:[
     {q:'What is Agile?', a:'An iterative and incremental approach to project management that prioritizes flexibility, collaboration, and customer feedback.'},
     {q:'When was the Agile Manifesto published and who wrote it?', a:'2001, by 17 software practitioners who met in Snowbird, Utah.'},
-    {q:'What are the 4 core values of the Agile Manifesto?', a:'1) Individuals & interactions over processes/tools
-2) Working software over documentation
-3) Customer collaboration over contracts
-4) Responding to change over following a plan'},
+    {q:'What are the 4 core values of the Agile Manifesto?', a:'1) Individuals & interactions over processes/tools\n2) Working software over documentation\n3) Customer collaboration over contracts\n4) Responding to change over following a plan'},
     {q:'When was Scrum formalized and by whom?', a:'1995 by Jeff Sutherland and Ken Schwaber.'},
     {q:'What 1940s concept influenced Agile methodology?', a:'Kanban, developed at Toyota with Lean roots.'},
     {q:'What is the goal of Agile?', a:'Deliver increments of working software quickly, with close collaboration instead of rigid planning.'},
@@ -323,11 +318,7 @@ const DECKS = [
   cards:[
     {q:'What is an API?', a:'Application Programming Interface — a defined way for software systems to communicate. It encapsulates complexity and exposes controlled functionality.'},
     {q:'What is REST and who defined it?', a:'REpresentational State Transfer, defined by Roy Fielding in 2000 in his dissertation. It is stateless, uses HTTP, and is resource-based (nouns, not verbs).'},
-    {q:'What are the 5 REST principles?', a:'1) Stateless communication
-2) Client-server separation
-3) Uniform interface
-4) Resource-based (nouns)
-5) Cacheable responses'},
+    {q:'What are the 5 REST principles?', a:'1) Stateless communication\n2) Client-server separation\n3) Uniform interface\n4) Resource-based (nouns)\n5) Cacheable responses'},
     {q:'What is SOAP and what does it use?', a:'Simple Object Access Protocol — uses XML + WSDL (Web Services Description Language). Strong typing but verbose and brittle.'},
     {q:'What are the common HTTP verbs used in REST?', a:'GET, POST, PUT, PATCH, DELETE'},
     {q:'What are GraphQL and gRPC, and which companies developed them?', a:'GraphQL was developed by Facebook for structured querying. gRPC was developed by Google using binary transport — both are 2020s-era API technologies.'},
@@ -577,10 +568,7 @@ const DECKS = [
     {q:'What does MVP stand for and what does it really mean?', a:'Minimum Viable Product. Minimum = only essential functionality. Viable = reliable, stable, demonstrable. Product = can be handed off, shown, or used. NOT a prototype.'},
     {q:'What is the "Late-Stage Trap" near the end of a project?', a:'Common behaviors: adding "just one more feature," neglecting documentation/polish, ignoring testing debt, over-optimizing things users will never see.'},
     {q:'What is a Code Freeze?', a:'A period when no new features are added — only fixes, tests, or documentation updates are allowed.'},
-    {q:'What are the 3 questions to ask when deciding what to cut or postpone?', a:'1) Does this directly improve the user\'s core experience?
-2) Can we test it in time?
-3) Does it risk breaking something stable?
-If no → move to "Future Enhancements."'},
+    {q:'What are the 3 questions to ask when deciding what to cut or postpone?', a:'1) Does this directly improve the user\'s core experience?\n2) Can we test it in time?\n3) Does it risk breaking something stable?\nIf no → move to "Future Enhancements."'},
     {q:'What are the priorities for the Final Sprint?', a:'All intended features working, all problematic features addressed (fixed/modified/workaround/removed), comprehensive regression testing, prepare demo platform, all team members familiar with all layers.'},
     {q:'Why is "Cutting is not quitting"?', a:'Cutting features during code freeze is about focusing — delivering a smaller but working product beats a large unfinished one.'},
   ],
@@ -665,117 +653,4 @@ If no → move to "Future Enhancements."'},
     {q:'A team uses /api/v1/ today. They release a backward-incompatible v2. Per SemVer, the library version most likely became:', options:{A:'1.0.1 → 1.0.2',B:'1.5.0 → 1.6.0',C:'1.5.0 → 2.0.0',D:'1.5.0 → 1.5.1'}, answer:'C', topic:'Versioning', exp:'Breaking changes bump the MAJOR version: 1.x → 2.0.0.', correctAnswerText:'1.5.0 → 2.0.0'},
   ],
 },
-];
-
-const EXAM_QUESTIONS = [
-  {id:1, topic:'Requirements Engineering', type:'short_answer', question:'What are the three elements of the classic software trilemma?', answer:'Good, Fast, and Cheap — you can only pick two.'},
-  {id:2, topic:'Requirements Engineering', type:'short_answer', question:'What are the main requirements elicitation techniques?', answer:'Interviews, focus groups, surveys, shadowing/observation, copycatting, document analysis, and prototyping.'},
-  {id:3, topic:'Requirements Engineering', type:'short_answer', question:'What are functional requirements? Give examples.', answer:'Behaviors the system must perform — e.g., Search, Authentication, Add to Cart, Take Payment.'},
-  {id:4, topic:'Requirements Engineering', type:'short_answer', question:'What are Non-Functional Requirements (NFRs)? Give examples.', answer:'Quality attributes the system must have — e.g., Performance, Security, Compatibility, Compliance.'},
-  {id:5, topic:'Requirements Engineering', type:'short_answer', question:'What is the standard user story format?', answer:'"As a [user persona], I want [describe need] so that [describe benefit]"'},
-  {id:6, topic:'Agile & Scrum', type:'short_answer', question:'What is Agile?', answer:'An iterative and incremental approach to project management that prioritizes flexibility, collaboration, and customer feedback.'},
-  {id:7, topic:'Agile & Scrum', type:'short_answer', question:'When was the Agile Manifesto published and who wrote it?', answer:'2001, by 17 software practitioners who met in Snowbird, Utah.'},
-  {id:8, topic:'Agile & Scrum', type:'short_answer', question:'What are the 4 core values of the Agile Manifesto?', answer:'1) Individuals & interactions over processes/tools
-2) Working software over documentation
-3) Customer collaboration over contracts
-4) Responding to change over following a plan'},
-  {id:9, topic:'Agile & Scrum', type:'short_answer', question:'When was Scrum formalized and by whom?', answer:'1995 by Jeff Sutherland and Ken Schwaber.'},
-  {id:10, topic:'Agile & Scrum', type:'short_answer', question:'What 1940s concept influenced Agile methodology?', answer:'Kanban, developed at Toyota with Lean roots.'},
-  {id:11, topic:'SCM, Git & GitHub', type:'short_answer', question:'What does SCM stand for and what is it?', answer:'Source Control Management (also called Version Control Systems/VCS). It tracks and manages changes to source code over time.'},
-  {id:12, topic:'SCM, Git & GitHub', type:'short_answer', question:'What is the difference between centralized and distributed VCS?', answer:'Centralized (SVN, Perforce): single central repository, always needs network. Distributed (Git, Mercurial): every user has a full copy, full offline work possible.'},
-  {id:13, topic:'SCM, Git & GitHub', type:'short_answer', question:'What was the first centralized VCS and when was it created?', answer:'SCCS (Source Code Control System) in the 1970s–1980s.'},
-  {id:14, topic:'SCM, Git & GitHub', type:'short_answer', question:'When did Git emerge and what type of VCS is it?', answer:'2000s. Git is a distributed VCS and is currently the most widely used.'},
-  {id:15, topic:'SCM, Git & GitHub', type:'short_answer', question:'Name three modern cloud-based SCM platforms.', answer:'GitHub, GitLab, and Bitbucket (also Azure DevOps).'},
-  {id:16, topic:'Greenfield vs Brownfield', type:'short_answer', question:'What is Greenfield development?', answer:'Starting a project from scratch with no existing systems, codebases, or constraints. Developers have complete freedom in technology stack, architecture, and design.'},
-  {id:17, topic:'Greenfield vs Brownfield', type:'short_answer', question:'What is Brownfield development?', answer:'Working within or building on top of an existing system, often with legacy code, infrastructure, or organizational processes. Involves refactoring, modernizing, or extending existing solutions.'},
-  {id:18, topic:'Greenfield vs Brownfield', type:'short_answer', question:'Which type of project typically has higher flexibility: Greenfield or Brownfield?', answer:'Greenfield — developers have high freedom to choose any stack or design. Brownfield has low flexibility due to existing integrations.'},
-  {id:19, topic:'Greenfield vs Brownfield', type:'short_answer', question:'What type of risk is more common in Greenfield vs Brownfield projects?', answer:'Greenfield: market risk (will it succeed?). Brownfield: technical risk (can we modernize safely?).'},
-  {id:20, topic:'Greenfield vs Brownfield', type:'short_answer', question:'What skill set is most demanded in Brownfield projects?', answer:'Strong debugging, refactoring, and system analysis skills.'},
-  {id:21, topic:'Code Quality', type:'short_answer', question:'What is Code Quality?', answer:'A measure of how well code adheres to standards, practices, and maintainability principles.'},
-  {id:22, topic:'Code Quality', type:'short_answer', question:'What is the difference between internal and external code quality?', answer:'Internal: structure, readability, maintainability. External: correctness, performance, security, usability.'},
-  {id:23, topic:'Code Quality', type:'short_answer', question:'List the 7 attributes of code quality from the slides.', answer:'Readability, Maintainability, Reliability, Performance, Testability, Scalability, Appropriateness.'},
-  {id:24, topic:'Code Quality', type:'short_answer', question:'What is a linter?', answer:'A static analysis tool that analyzes source code to flag potential errors, bugs, stylistic issues, and suspicious constructs. It acts as an automated code reviewer.'},
-  {id:25, topic:'Code Quality', type:'short_answer', question:'What is Cyclomatic Complexity?', answer:'A complexity metric that measures the number of linearly independent paths through a program — higher values indicate more complex, harder-to-test code.'},
-  {id:26, topic:'Software Patterns', type:'short_answer', question:'What are software patterns?', answer:'Reusable solutions to recurring problems. Not code copy-paste, but generalizable templates that exist at multiple levels (low, mid, high).'},
-  {id:27, topic:'Software Patterns', type:'short_answer', question:'What are the three levels of software patterns?', answer:'Low-level (language idioms/syntax), Mid-level (design patterns like MVC/Observer/Factory), High-level (architecture patterns like Microservices/CQRS).'},
-  {id:28, topic:'Software Patterns', type:'short_answer', question:'What is a language idiom in programming?', answer:'A natural, commonly accepted way of solving problems in a specific language — makes code readable, concise, and "native-feeling."'},
-  {id:29, topic:'Software Patterns', type:'short_answer', question:'What is the difference between an Idiom and a Design Pattern?', answer:'Idioms are language-specific and make code readable. Patterns are language-agnostic and solve architectural/design problems.'},
-  {id:30, topic:'Software Patterns', type:'short_answer', question:'Give examples of mid-level (design) patterns.', answer:'Observer, Factory, MVC (Model-View-Controller), Strategy, Builder, Repository, Adapter.'},
-  {id:31, topic:'TDD – Test Driven Development', type:'short_answer', question:'What is TDD?', answer:'A development approach where you write tests BEFORE writing code. Follows the Red-Green-Refactor (RGR) cycle. Tests are not an afterthought.'},
-  {id:32, topic:'TDD – Test Driven Development', type:'short_answer', question:'What is the Red-Green-Refactor (RGR) cycle?', answer:'RED: Write a failing test. GREEN: Write just enough code to make it pass. REFACTOR: Clean up the code while keeping tests passing.'},
-  {id:33, topic:'TDD – Test Driven Development', type:'short_answer', question:'Who founded TDD and when?', answer:'Kent Beck established TDD in 2002 with his book "Test-Driven Development: By Example." Rooted in Extreme Programming (XP).'},
-  {id:34, topic:'TDD – Test Driven Development', type:'short_answer', question:'What are the six types of testing covered in the slides?', answer:'Unit, Integration, Regression, Stress/Load, End-To-End (E2E), UI/Usability.'},
-  {id:35, topic:'TDD – Test Driven Development', type:'short_answer', question:'What is the Arrange-Act-Assert (AAA) pattern?', answer:'A testing pattern that divides each test into three sections: Arrange (set up data), Act (invoke the function), Assert (verify the result).'},
-  {id:36, topic:'Software Process Models', type:'short_answer', question:'What is a software process model?', answer:'A framework that defines how a software project is planned, developed, tested, and delivered. Used to manage people, time, cost, and quality.'},
-  {id:37, topic:'Software Process Models', type:'short_answer', question:'What are the phases of the Waterfall model?', answer:'Requirements → Design → Implementation → Testing → Deployment → Maintenance. Each phase must be complete before the next begins.'},
-  {id:38, topic:'Software Process Models', type:'short_answer', question:'When should you use Waterfall?', answer:'Requirements are clear/fixed, client unavailable for feedback, regulated industries (aerospace, defense, medical), strong documentation emphasis.'},
-  {id:39, topic:'Software Process Models', type:'short_answer', question:'When should you use Agile?', answer:'Requirements are unclear or evolving, frequent iterations needed, collaborative self-managed team, MVPs, startups, R&D, SaaS.'},
-  {id:40, topic:'Software Process Models', type:'short_answer', question:'What is a Hybrid/Spiral process model?', answer:'Combines elements of Waterfall and Agile — iterative cycles with structured phases, balancing flexibility and documentation.'},
-  {id:41, topic:'SDLC & ALM', type:'short_answer', question:'What does SDLC stand for and what is it?', answer:'Software Development Life Cycle. A structured methodology for developing software through defined phases.'},
-  {id:42, topic:'SDLC & ALM', type:'short_answer', question:'What does ALM stand for and what is it?', answer:'Application Lifecycle Management. A broader discipline encompassing the complete lifespan of an application from inception to retirement.'},
-  {id:43, topic:'SDLC & ALM', type:'short_answer', question:'How does SDLC relate to ALM?', answer:'SDLC is a subset of ALM. ALM extends beyond development to include planning, release, operations, governance, and sunset/retirement.'},
-  {id:44, topic:'SDLC & ALM', type:'short_answer', question:'What are the stages of ALM?', answer:'Ideation → Planning → Development (SDLC) → Release → Operations → Governance → Sunset.'},
-  {id:45, topic:'SDLC & ALM', type:'short_answer', question:'What is the real-world analogy for SDLC vs ALM?', answer:'SDLC = designing and building a car in the factory. ALM = managing the car\'s full lifecycle: manufacturing, selling, servicing, upgrading, and decommissioning.'},
-  {id:46, topic:'Full Stack Development', type:'short_answer', question:'What was the old definition of a Full Stack Developer (2010s)?', answer:'"One person who builds the entire web app — HTML/CSS, JS, backend, and database."'},
-  {id:47, topic:'Full Stack Development', type:'short_answer', question:'What is the modern definition of a Full Stack Developer (2020s)?', answer:'"An engineer who understands and can navigate multiple layers of the stack, even if they specialize in one."'},
-  {id:48, topic:'Full Stack Development', type:'short_answer', question:'What is a T-shaped developer?', answer:'A developer with broad knowledge across multiple layers of the stack but deep expertise in one specific area.'},
-  {id:49, topic:'Full Stack Development', type:'short_answer', question:'What are the three tiers of the full stack?', answer:'Front-end (client/UI), Middle tier (API/business logic), and Back-end (database/persistence).'},
-  {id:50, topic:'Full Stack Development', type:'short_answer', question:'What is "Full Stack + DevOps" sometimes called?', answer:'FSD — Full Stack Developer expanded to include DevOps, CI/CD, and sometimes cloud knowledge.'},
-  {id:51, topic:'APIs', type:'short_answer', question:'What is an API?', answer:'Application Programming Interface — a defined way for software systems to communicate. It encapsulates complexity and exposes controlled functionality.'},
-  {id:52, topic:'APIs', type:'short_answer', question:'What is REST and who defined it?', answer:'REpresentational State Transfer, defined by Roy Fielding in 2000 in his dissertation. It is stateless, uses HTTP, and is resource-based (nouns, not verbs).'},
-  {id:53, topic:'APIs', type:'short_answer', question:'What are the 5 REST principles?', answer:'1) Stateless communication
-2) Client-server separation
-3) Uniform interface
-4) Resource-based (nouns)
-5) Cacheable responses'},
-  {id:54, topic:'APIs', type:'short_answer', question:'What is SOAP and what does it use?', answer:'Simple Object Access Protocol — uses XML + WSDL (Web Services Description Language). Strong typing but verbose and brittle.'},
-  {id:55, topic:'APIs', type:'short_answer', question:'What are the common HTTP verbs used in REST?', answer:'GET, POST, PUT, PATCH, DELETE'},
-  {id:56, topic:'DDD & SOLID', type:'short_answer', question:'What is Domain-Driven Design (DDD) and who introduced it?', answer:'A strategic and architectural philosophy that lets the business domain drive software structure (not technology or database). Introduced by Eric Evans in 2003.'},
-  {id:57, topic:'DDD & SOLID', type:'short_answer', question:'What are the DDD Building Blocks?', answer:'Entities (identity), Value Objects (immutable, identity by value), Aggregates & Aggregate Roots, Repositories, Services, Events.'},
-  {id:58, topic:'DDD & SOLID', type:'short_answer', question:'What is a DDD Entity?', answer:'An object with a unique identity that persists over time — e.g., Player, Order, Customer. Identity is what makes two entities different even if their attributes are the same.'},
-  {id:59, topic:'DDD & SOLID', type:'short_answer', question:'What is a DDD Value Object?', answer:'An immutable object identified by its value, not an ID — e.g., Money($10), Coordinates(lat, lng). Best for enforcing semantic typing.'},
-  {id:60, topic:'DDD & SOLID', type:'short_answer', question:'What is a DDD Aggregate Root?', answer:'The root entity of an Aggregate cluster. All access to the aggregate goes through the root, which enforces consistency boundaries.'},
-  {id:61, topic:'Persistence Layer', type:'short_answer', question:'What is persistence in software?', answer:'Persistence is the art of making data outlive the program that created it — saving state so it survives beyond a single program execution.'},
-  {id:62, topic:'Persistence Layer', type:'short_answer', question:'What is the difference between volatile and non-volatile memory?', answer:'Volatile (RAM): disappears when power is off. Non-volatile (Disk, SSD, Flash): survives power loss. Persistence relies on non-volatile storage.'},
-  {id:63, topic:'Persistence Layer', type:'short_answer', question:'What does the persistence layer do?', answer:'Manages where and how data is stored and retrieved. Converts in-memory objects to storable formats and back. Handles save, update, delete, query. Protects upper layers from storage details.'},
-  {id:64, topic:'Persistence Layer', type:'short_answer', question:'How does the persistence layer fit in layered architecture?', answer:'UI → Application → Domain → Persistence → Infrastructure. The repository hides whether data lives in a file, database, or API.'},
-  {id:65, topic:'Persistence Layer', type:'short_answer', question:'Why do we need persistence?', answer:'When a program ends, its variables disappear. Persistence saves state — users, settings, progress, messages — so it survives between program runs.'},
-  {id:66, topic:'Sync vs Async', type:'short_answer', question:'What is synchronous execution?', answer:'Tasks run one after another — each must finish before the next starts. Simple and predictable but can be slow. Analogy: waiting in line.'},
-  {id:67, topic:'Sync vs Async', type:'short_answer', question:'What is asynchronous execution?', answer:'Tasks can start and finish later — work continues while waiting. Improves responsiveness and efficiency. Analogy: starting laundry while doing other things.'},
-  {id:68, topic:'Sync vs Async', type:'short_answer', question:'What is the difference between blocking and non-blocking?', answer:'Blocking: program halts until a task completes. Non-blocking: can start other work while waiting. Analogy: one chef cooks while others wait (blocking) vs. everyone multitasking (non-blocking).'},
-  {id:69, topic:'Sync vs Async', type:'short_answer', question:'What is AJAX?', answer:'Asynchronous JavaScript and XML. Fetches data without reloading the page. Originally used XMLHttpRequest; evolved to use fetch() or Axios/React Query.'},
-  {id:70, topic:'Sync vs Async', type:'short_answer', question:'What is a thread?', answer:'The smallest unit of execution inside a program. Multiple threads allow concurrent execution within a single process.'},
-  {id:71, topic:'Cross-Platform Development', type:'short_answer', question:'What is the historical timeline of cross-platform development?', answer:'Assembly (hardware-specific) → C (compile anywhere) → Java/JVM 1995 (write once, run anywhere) → .NET CLR, Flash, Qt (2000s) → Flutter, React Native, WebAssembly (2010s+)'},
-  {id:72, topic:'Cross-Platform Development', type:'short_answer', question:'What is the JVM and what does it enable?', answer:'Java Virtual Machine — executes platform-neutral bytecode. Enables "write once, run anywhere." Supports Java, Kotlin, Scala, Groovy.'},
-  {id:73, topic:'Cross-Platform Development', type:'short_answer', question:'What is the difference between Native, Bytecode, and Interpreted execution?', answer:'Native: compiled directly for CPU (C/C++). Bytecode: intermediate form executed by VM (Java, .NET). Interpreted: read line-by-line (Python, JS). Hybrid (JIT/AOT): compiles some code at runtime.'},
-  {id:74, topic:'Cross-Platform Development', type:'short_answer', question:'What is WebAssembly (WASM)?', answer:'A binary instruction format that allows code written in languages like C++, Rust, or Go to run in web browsers at near-native speed.'},
-  {id:75, topic:'Cross-Platform Development', type:'short_answer', question:'What are examples of cross-platform frameworks?', answer:'Flutter (Google), React Native (Meta), MAUI (.NET), Kotlin Multiplatform.'},
-  {id:76, topic:'Refactor vs Rewrite', type:'short_answer', question:'What is refactoring?', answer:'Improving the internal structure of code WITHOUT changing its external behavior. Examples: simplify functions, rename variables, extract classes, add tests. "Clean up the house without moving out."'},
-  {id:77, topic:'Refactor vs Rewrite', type:'short_answer', question:'What is rewriting?', answer:'Rebuilding the system from scratch, often with new tech or design principles. Examples: replacing PHP with Node.js, monolith → microservices. "Demolish and rebuild — same address, new foundation."'},
-  {id:78, topic:'Refactor vs Rewrite', type:'short_answer', question:'Why do teams refactor code?', answer:'Code smells (long methods, duplication), hard to add features safely, poor readability, no tests, gradual performance degradation. Goal: incremental improvement without breaking behavior.'},
-  {id:79, topic:'Refactor vs Rewrite', type:'short_answer', question:'Why do teams rewrite software?', answer:'Tech stack is obsolete, architecture can\'t scale, legacy frameworks/security issues, team doesn\'t understand old code, integrating new platforms.'},
-  {id:80, topic:'Refactor vs Rewrite', type:'short_answer', question:'Compare refactor vs rewrite on risk and cost.', answer:'Refactor: lower risk, lower upfront cost, incremental delivery. Rewrite: higher risk, high upfront cost, all-at-once delivery.'},
-  {id:81, topic:'Defensive Programming', type:'short_answer', question:'What is defensive programming?', answer:'A mindset and set of techniques that make software behave predictably even under unexpected conditions. Goal: anticipate failures, prevent/limit damage, communicate errors clearly.'},
-  {id:82, topic:'Defensive Programming', type:'short_answer', question:'What are the key principles of defensive programming?', answer:'Validate all inputs, avoid assumptions about data/environment/state, fail fast and clearly, use guard clauses instead of deep nesting, handle edge cases (nulls, empty arrays, limits), minimize side effects.'},
-  {id:83, topic:'Defensive Programming', type:'short_answer', question:'What does "fail fast, fail clearly" mean?', answer:'When an error occurs, detect it immediately and communicate it explicitly (via exceptions, asserts) rather than silently continuing in an invalid state.'},
-  {id:84, topic:'Defensive Programming', type:'short_answer', question:'What is a guard clause?', answer:'An early return or check at the start of a function that handles invalid/edge-case inputs immediately, avoiding deep nesting (if-else trees).'},
-  {id:85, topic:'Feature Flags', type:'short_answer', question:'What is a feature flag?', answer:'A switch that controls whether a feature is enabled. The code exists even when the feature is hidden or disabled. Flags can be changed by environment, user, role, tier, region, or runtime condition.'},
-  {id:86, topic:'Feature Flags', type:'short_answer', question:'What is the difference between deployment and release?', answer:'Deployment: code is installed in an environment. Release: users are allowed to access it. Feature flags let these happen at different times.'},
-  {id:87, topic:'Feature Flags', type:'short_answer', question:'What are the 6 common categories of feature flags?', answer:'Release flags, Experiment flags, Operations flags, Permission/entitlement flags, Tier/subscription flags, Kill switches.'},
-  {id:88, topic:'Feature Flags', type:'short_answer', question:'What are release flags used for?', answer:'To hide new functionality until it is ready. Common for UI redesigns, new workflows, new services. Allows code to be merged and deployed before public availability.'},
-  {id:89, topic:'MVP Evaluation & Code Freeze', type:'short_answer', question:'What does MVP stand for and what does it really mean?', answer:'Minimum Viable Product. Minimum = only essential functionality. Viable = reliable, stable, demonstrable. Product = can be handed off, shown, or used. NOT a prototype.'},
-  {id:90, topic:'MVP Evaluation & Code Freeze', type:'short_answer', question:'What is the "Late-Stage Trap" near the end of a project?', answer:'Common behaviors: adding "just one more feature," neglecting documentation/polish, ignoring testing debt, over-optimizing things users will never see.'},
-  {id:91, topic:'MVP Evaluation & Code Freeze', type:'short_answer', question:'What is a Code Freeze?', answer:'A period when no new features are added — only fixes, tests, or documentation updates are allowed.'},
-  {id:92, topic:'MVP Evaluation & Code Freeze', type:'short_answer', question:'What are the 3 questions to ask when deciding what to cut or postpone?', answer:'1) Does this directly improve the user\'s core experience?
-2) Can we test it in time?
-3) Does it risk breaking something stable?
-If no → move to "Future Enhancements."'},
-  {id:93, topic:'Troubleshooting Methods', type:'short_answer', question:'What percentage of engineering time is spent diagnosing issues according to the slides?', answer:'70–80% of engineering time is spent diagnosing, not coding.'},
-  {id:94, topic:'Troubleshooting Methods', type:'short_answer', question:'What is the Troubleshooting Mindset?', answer:'Be curious (not defensive), assume unknowns (not incompetence), verify assumptions with data (not anecdotes), treat symptoms as clues (not conclusions), keep notes.'},
-  {id:95, topic:'Troubleshooting Methods', type:'short_answer', question:'What are the 5 categories of software problems?', answer:'Code logic bugs, Integration issues, Configuration/Environment issues, Performance issues, Process/Team issues.'},
-  {id:96, topic:'Troubleshooting Methods', type:'short_answer', question:'What tools are used for integration issues?', answer:'Postman, Swagger, and mocks — to test API mismatches and version drift.'},
-  {id:97, topic:'Versioning', type:'short_answer', question:'What is Semantic Versioning (SemVer) and what is its format?', answer:'A versioning standard with format MAJOR.MINOR.PATCH (e.g., v2.4.6). MAJOR = breaking changes, MINOR = new compatible features, PATCH = bug fixes.'},
-  {id:98, topic:'Versioning', type:'short_answer', question:'What does each SemVer component mean?', answer:'MAJOR: breaking changes (users must update code). MINOR: new features, still backward-compatible. PATCH: bug fixes, no behavior change.'},
-  {id:99, topic:'Versioning', type:'short_answer', question:'What are SemVer pre-release suffixes?', answer:'-alpha, -beta, -rc.1 (release candidate). E.g., v2.0.0-beta.1 signals an unreleased, pre-production version.'},
-  {id:100, topic:'Versioning', type:'short_answer', question:'What are the four common versioning approaches?', answer:'Sequential (1, 2, 3), Date-based (2025.11.11), Build-based (1.0.1342), Semantic/SemVer (1.2.3).'},
 ];
